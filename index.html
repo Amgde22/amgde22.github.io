@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landingpage03</title>
+    <script src="https://kit.fontawesome.com/0f1fd8a9b7.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100;1,200&family=Roboto+Mono:wght@200&display=swap');
+        body {
+            background-color: #f3f3f3 ;
+            margin: 0;
+        }
+      
+        /* section */
+        section {
+            
+            width: 100vw;
+            min-height: 86px;
+            background-color: white;
+            display: flex;
+        }
+        /* main */
+         #topContainer{
+            background-color: #f3f3f3 ;
+            width: 100vw;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        div.main {
+            flex: 0 0 auto;
+            width: 70vw;
+            height: 500px;
+            background-color: #fff;
+            font-family:  'Roboto Mono', monospace;
+           text-align: center;
+           position: relative;
+           
+        }
+        h1 {
+            font-size: 3rem;
+        }
+        p {
+            font-size: 1.5rem;
+        }
+        ul {
+            text-align: initial;
+        }
+        li {
+            list-style: none;
+            font-family: 'Raleway', sans-serif; 
+            font-weight: 900;
+            font-size: 1.5rem;
+            margin-left: 20px;
+            text-decoration: underline;
+           line-height: 3rem;
+        }
+        li:nth-of-type(1){
+            color: rgb(214, 115, 131);
+            
+        }
+        li:nth-of-type(1)::after {
+            font-family: 'Font Awesome 6 Free';
+            content: '\f810';
+            display: inline-block;
+        }
+        li:nth-of-type(3):hover::after {
+            font-family: sans-serif;
+            margin-left: 10px;
+            display: inline-block;
+            content: ' ඞ';
+        }
+
+         li::before {
+             display: inline-block;
+             color: black;
+            font-family: 'Font Awesome 6 Free';
+            content: '\f004' ;
+            font-weight:100 ;
+            font-size:20px ;
+            margin-right: 20px;
+        }
+       
+        /* next button */
+        div.next {
+            display: block;
+            position: absolute;
+            bottom: 15px;
+            width: 100%;
+            min-height: 30px;
+            flex: none;
+            
+
+
+            display: flex;
+            justify-content: space-between;
+        }
+        div.next button {
+            /* /* margin-left: auto; */
+            margin-right: 50px; 
+
+            display: block;
+            height: 100px;
+            width: 40%;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            
+            color: white;
+            font-size: 28px;
+
+            box-shadow: 0px 0px 5px rgb(95, 93, 93);
+            background-color: #cc9543;
+            cursor:pointer;
+
+        }
+        div.next a.ligal {
+            position: relative;
+            display: flex;
+            
+            margin-left:40px ;
+            color: white;
+            font-size:28px  ;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            text-decoration: none;
+
+            background-color: #6abfc3;
+            justify-content: center;
+            align-items: center;
+
+            height: 100px;
+            width: 20%;
+        }
+        div.next a.ligal::before {
+            font-family:'Font Awesome 6 Free';
+            content: '\f2b4';
+        }
+        div.next a.ligal span{
+            display:block;
+           padding: 5px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: white;
+            
+            
+            position: absolute;
+            left: 50%;
+           font-size: 12px;
+
+            width: 180px;
+            height: 200px;
+            background-color: rgba(0, 0, 0, 0.829);
+
+            transition:transform 150ms ease-in
+                        , left 150ms ease-in;
+            transform: scale(0);
+        }
+        div.next a.ligal:hover span{ 
+            transform:  scale(1);
+            left: 90%;
+            
+        }
+        div.next a.ligal span p{
+            font-size: 16px;
+        }
+
+        
+
+       
+    </style>
+</head>
+<body>
+   <section>
+   <a href="#"> <img src="./assets/top-logo.png" alt="Logo"></a>
+   </section>
+   <div id="topContainer">
+    <div class="main" style=" box-shadow: 0px 0px 5px rgb(95, 93, 93); padding: 10px;">
+        <h1>This is my landing page</h1>
+        <p>I wanted to have fun while creating this , so its based on my favorite things which are :
+            <ul>
+                <li>  Ice creem </li>
+                <li>  Anime Girls</li>
+                <li>  and Shiposts</li>
+            </ul>
+        </p>
+        
+        <div class="next">
+            <a href="./assets/Problem.jpeg" class="ligal" target="_blank"><span><P>This design is an original of the master mind <br>"Amgde22" </P>
+            any similarities with T.O.P is one made of your imagination , if this displeases you in any shape or form 
+            <br> <br>Click Here</span></a>
+            <form action="main.html">
+               <button > Next</button>
+               </form> 
+        </div>
+    </div>
+    </div>
+</body>
+</html>

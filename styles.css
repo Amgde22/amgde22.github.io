@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100;1,200&family=Roboto+Mono:wght@200&display=swap');
+body {
+
+/* PERSONAL font-family: 'Raleway', sans-serif; */
+/* TOP font-family: 'Roboto Mono', monospace; */
+box-sizing: border-box;
+margin: 0;
+font-family: 'Raleway', sans-serif;
+}
+* {
+    box-sizing: inherit;
+}
+/* headers */
+.header1 {
+    position: relative;
+    background-color: rgb(111, 197, 250) ;
+    height: 600px;
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+        nav{
+            border: 5px dotted grey;
+            height: 60px;
+             width: 97vw;
+            margin-top: 10px;
+
+            flex: 0 1 auto;
+            justify-self:start;
+            
+            position: absolute;
+            top: 0;
+
+            display: flex;
+        
+        }
+            nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 32px;
+            margin-right: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+            nav a:nth-of-type(2) {
+            margin-left: auto;
+        }
+            nav a:last-of-type {
+            margin-right: 0px;
+            
+        }
+
+        .header2{
+    background-color: rgb(184, 228, 255);
+    width: 97vw;
+    height: 400px;
+
+    display: flex;
+
+    justify-self: center;
+    
+}
+            .header-div1 {
+                flex: 1 0 auto;
+                border: 9px dotted grey;
+                
+                display: flex;
+                
+                justify-content: center;
+                align-items: center;
+            }
+                    .header-div1 img{
+                       flex: 1 0 auto;
+                       display: block;
+                       width: 200px;
+                       
+                       margin-left: 30px;
+                     
+                    }
+
+
+            .header-div2{
+                flex: 2 1 auto;
+                width: min-content;
+                border: 9px dotted grey;
+                display: flex;
+                flex-direction: column;
+
+                align-items: center;
+               
+            }
+                   .header-div2 h1 {
+                       font-size: 50px;
+                       width: fit-content;
+                   }
+                   .header-div2 p {
+                    font-size: 30px;
+
+
+                   }
+
+/* Main sexion */
+#section {
+    position: relative;
+    background-color: rgb(184, 228, 255);
+    height: min-content;
+    width: 100vw;
+    overflow: hidden;
+  
+}   
+        #themeDiv {
+            position: absolute;
+            width: 100px;
+            height: 200px;
+            background-color: rgb(37, 240, 10);
+            padding: 20px;
+
+            right: 0;
+            transition: all 400ms ease;
+            
+            top: 0;
+            bottom: 0;
+            margin:  auto 0 ;
+            display: flex;
+            flex-flow: column wrap;
+            
+            
+        }
+        #themeDiv.hidden {
+            transform: translate(100% , 0);
+
+        }
+            #themeDiv div {
+                width: 25px;
+                height: 25px;
+                margin:10px;
+                border: 2px solid white;
+                color:rgb(255, 217, 0)
+            }
+
+            #themeDiv #themeSlider {
+                position: absolute;
+                right: 100%;
+                bottom: 0;
+                top: 0;
+                width: 50px;
+                height: 50px;
+                background-color: white;
+                margin:  auto 0 ;
+                cursor: pointer;
+                font-size: 32px;
+                text-align: center;
+                padding-top: 5px;
+
+                
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            } 
+            #themeDiv #themeSlider img {
+                transition: transform 300ms ease;
+                display: block;
+                transform: scaleX(1);
+            }
+            #themeDiv #themeSlider img.hidden {
+                transform: scaleX(-1);
+
+            }
+        #buttonsContainer { 
+            width: 97vw;
+            margin:30px  auto 0px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+
+            position: relative;
+        }
+                    #buttonsContainer button {
+                        width: 300px;
+                        height: 70px;
+                        /* flex: 0 1 auto; */
+            
+                    }
+                   
+        #contentDivHolder {
+            width: 97vw;
+            height: 600px;
+            border:5px solid gray ;
+            background-color: hotpink;
+            margin: 0 auto;
+            overflow: hidden;
+
+            position: relative;
+        }
+
+        .contentDiv1 , .contentDiv2 ,.contentDiv3{
+            position: absolute;
+            top: -100%;
+        width: 100%;
+        height: 100%;
+        
+        
+      
+
+        transition: all 250ms ease-in-out;
+        border:5px solid white ;
+        
+        }
+        
+        .showingCD {
+            top: 0;
+        }
+
+                /* COntent div 1 */
+                .contentDiv1 {
+                    display: flex;
+                    align-items:center;
+                    
+
+                }
+                .contentDiv1 figure{
+                    background-color: white;
+                    width: 20%;
+                    margin: auto;
+
+                    border-radius: 10%;
+                    overflow: hidden;
+                    text-align: center;
+                }
+                .contentDiv1 figure img {
+                    object-fit: cover;
+                    width: 100%;
+                }
+                /* ContentDiv2 */
+                .contentDiv2 {
+                    display: flex;
+                    flex-direction: column;
+                    
+                    align-items: center;
+                }
+                .contentDiv2 h1 {
+                    margin-top:15% ;
+                    padding: 20px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: 900;
+                    font-size: 32px;
+                    height: 50px;
+                    text-align: center;
+                    background-color: white;
+                    width: 75%;
+                }
+                .contentDiv2 #buttonHolder {
+                    display: flex;
+                    justify-content: center;
+                    gap: 20px;
+                }
