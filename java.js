@@ -4,16 +4,31 @@ buttons[1].mainDiv = document.querySelector(".contentDiv2")
 buttons[2].mainDiv = document.querySelector(".contentDiv3")
 
 let currentDiv = document.querySelector(".contentDiv1")
+const selectButtons = document.querySelectorAll(".slideButton")
+
+selectButtons.forEach( button => { 
+    button.addEventListener("click" , ()  => {
+            for( let j = 0 ; j < selectButtons.length; j++){
+                selectButtons[j].classList.remove("selected")
+            }
+        
+        button.classList.add("selected")
+        
+    })
 
 
+
+  
+ } )
 
 buttons.forEach( (button) => {
+
     button.addEventListener("click" , () => {
-        // alert("hi")
+        
         for(let i=0 ; i < buttons.length ;i++) {
             // if ( currentDiv.isSameNode( buttons[i].mainDiv) ) { continue;  }
             buttons[i].mainDiv.classList.remove("showingCD")
-
+            
         }
         
         if (currentDiv.isSameNode(button.mainDiv)) { button.mainDiv.classList.add("showingCD")}
@@ -61,6 +76,14 @@ const colors = [
     {
         mainColor : "rgb(255, 217, 0)" ,
         secondaryColor : "rgb(255, 247, 142)"
+    } ,
+    {
+        mainColor : "linear-gradient(to right, #3494e6, #ec6ead)" ,
+        secondaryColor : "rgba(255 ,255,255,0.6)"
+    },
+    {
+        mainColor :"linear-gradient(to right, #00b4db, #0083b0)",
+        secondaryColor : "rgba(255 ,255,255,0.6)"
     }
 
 ]
@@ -69,7 +92,7 @@ colors.forEach( (color) => {
     const clrBox = document.createElement("div")
     clrBox.mainColor = color.mainColor
     clrBox.secondaryColor = color.secondaryColor
-    clrBox.style.backgroundColor = clrBox.mainColor
+    clrBox.style.background = clrBox.mainColor
 
     clrBox.addEventListener("click" , () => { changeDemColors(clrBox.mainColor , clrBox.secondaryColor )  })
 
@@ -86,15 +109,62 @@ const Primaries = document.querySelectorAll(".primary")
 const Secondaries = document.querySelectorAll(".secondary")
 
 Primaries.forEach( (item) => {
-    item.style.backgroundColor = MC
+    item.style.background = MC
 } )
 
 Secondaries.forEach( (item) => {
-    item.style.backgroundColor = SC
+    item.style.background = SC
 
 } )
-
-
-
-
+if( MC === "linear-gradient(to right, #3494e6, #ec6ead)" || MC === "linear-gradient(to right, #00b4db, #0083b0)"){
+document.querySelector("#section").style.background = MC
 }
+}
+
+        /*  ANIME GIRL CHANGE  */
+const awesome = document.querySelector("#awesome")
+const gallerie = [{
+            src : "./images/ameri.png" ,
+            border : "orange" ,
+            text : "Anime Girls Are Awesome "
+        }
+        ,{
+            src : "./images/ice-cream.jpg" , 
+            border : "hotpink" ,
+            text : "Ice Creem Is Awesome"
+        },
+        {
+            src : "./images/doggo.png" ,
+            border : "wheat" ,
+            text : "Animals Are Awesome"
+        }
+        // ,
+        // {
+        //     src : "./images" ,
+        //     border : "" ,
+        //     text : ""
+        // },
+        // {
+        //     src : "./images" ,
+        //     border : "" ,
+        //     text : ""
+        // },
+        ]
+
+
+const picture = document.querySelector("#pic")
+let iii = 1 ;
+picture.addEventListener("animationiteration" , () => {
+
+    awesome.style.backgroundColor = gallerie[iii].border
+    awesome.innerText = gallerie[iii].text
+
+    picture.setAttribute("src" , gallerie[iii].src)
+    picture.style.borderColor = gallerie[iii].border
+
+
+    
+iii++
+if( iii >= gallerie.length  ){iii = 0}
+})
+
